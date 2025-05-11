@@ -1,4 +1,4 @@
-# hydro-os &nbsp; [![bluebuild build badge](https://github.com/eriq12/hydro-os/actions/workflows/build.yml/badge.svg)](https://github.com/eriq12/hydro-os/actions/workflows/build.yml)
+# hydro-os &nbsp; [![bluebuild build badge](https://git.hydrosaber.com/eriq12/hydro-os/actions/workflows/build.yml/badge.svg)](https://git.hydrosaber.com/eriq12/hydro-os/actions/workflows/build.yml)
 
 This is a personal OS distro that I am using to learn more about the technolgies behind Bluebuild and possibly to later learn about hosting a git server, container repositiories, and actions.
 
