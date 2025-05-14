@@ -1,9 +1,9 @@
 #!/usr/bin/env lua
 local menu = require("menu")
 local executable = {
-	["Shutdown"] = "/usr/share/hyprland/scripts/hypr_power/hypr_shutdown",
-	["Reboot"] = "/usr/share/hyprland/scripts/hypr_power/hypr_reboot",
-	["Log out"] = "/usr/share/hyprland/scripts/hypr_power/hypr_logout",
+	["Shutdown"] = "/usr/share/hypr-hydro-os/scripts/hypr_power/hypr_shutdown",
+	["Reboot"] = "/usr/share/hypr-hydro-os/scripts/hypr_power/hypr_reboot",
+	["Log out"] = "/usr/share/hypr-hydro-os/scripts/hypr_power/hypr_logout",
 	["Cancel"] = "",
 }
 

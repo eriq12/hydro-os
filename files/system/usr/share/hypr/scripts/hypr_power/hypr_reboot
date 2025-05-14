@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-/usr/share/hypr/scripts/hypr_power/hypr_close_clients
-
-systemctl reboot

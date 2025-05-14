@@ -9,7 +9,6 @@
     "modules-left": [
 	    "cpu",
 	    "memory",
-        "custom/edit-config",
         "hyprland/workspaces",
         "hyprland/window"
     ],
@@ -86,11 +85,6 @@
       "on-click": "swaync-client -t -sw",
       "on-click-right": "swaync-client -d -sw",
       "escape": true
-    },
-    "custom/edit-config": {
-      "format": "Edit",
-      "on-click": "$HOME/bin/local-lua $HOME/bin/launch-edit-configs.lua",
-      "on-click-right": "$HOME/bin/reload-waybar"
     },
     "mpris": {
         "format": "{player_icon} {title} - {artist}",
