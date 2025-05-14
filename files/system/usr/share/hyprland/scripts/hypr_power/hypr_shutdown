@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+~/bin/hypr_power/hypr_close_clients
+
+systemctl poweroff

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+/usr/share/hyprland/scripts/hypr_power/hypr_close_clients
+
+systemctl reboot
