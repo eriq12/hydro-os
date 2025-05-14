@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=Hyprland Hydro-os
+Name=Hyprland Hydro-os (uwsm managed)
 Comment=An intelligent dynamic tiling Wayland compositor, with Hydro-os configuration.
 Exec=uwsm start -- hyprland-hydro-os.desktop
 Type=Application
