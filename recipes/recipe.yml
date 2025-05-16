@@ -28,6 +28,9 @@ modules:
       - SwayNotificationCenter
       - hyprpolkitagent
       - hyprshot
+      - rofi
+    remove:
+      - wofi
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
