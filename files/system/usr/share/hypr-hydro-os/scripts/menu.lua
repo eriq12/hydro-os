@@ -17,7 +17,7 @@ function menu:bring_menu(prompt, options)
 
 	options_string = options_string:sub(1, -2)
 
-	local command = "echo -e '" .. options_string .. "' | rofi -dmenu -i -p '" .. prompt .. "'"
+	local command = "echo -e '" .. options_string .. "' | wofi -dmenu -i -p '" .. prompt .. "'"
 	local f = assert(io.popen(command, "r"))
 	local s = menu:clean_string(assert(f:read("*a")))
 	f:close()
