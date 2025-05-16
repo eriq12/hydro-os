@@ -26,6 +26,8 @@ modules:
       - waybar
       - neovim
       - SwayNotificationCenter
+      - hyprpolkitagent
+      - hyprshot
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
@@ -40,6 +42,7 @@ modules:
     user:
       enabled:
         - waybar.service
+        - hyprpolkitagent.service
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
