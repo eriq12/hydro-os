@@ -1,0 +1,16 @@
+[Unit]
+Description=A simple notification daemon with a GTK gui for notifications and the control center.
+Documentation=man:swaync(1)
+# order startup after WM
+After=graphical-session.target
+
+[Service]
+Type=exec
+# Repurpose XDG Autostart filtering
+ExecCondition=/lib/systemd/systemd-xdg-autostart-condition "wlroots:sway:Wayfire:labwc:Hyprland" ""
+ExecStart=/usr/bin/swaync
+Restart=on-failure
+Slice=app-graphical.slice
+
+[Install]
+WantedBy=graphical-session.target
