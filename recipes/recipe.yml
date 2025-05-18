@@ -6,7 +6,7 @@ name: hydro-os
 description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/bazzite-asus-nvidia
+base-image: quay.io/fedora-ostree-desktops/base-atomic
 image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
@@ -23,7 +23,7 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/erikreider/SwayNotificationCenter/repo/fedora-%OS_VERSION%/erikreider-SwayNotificationCenter-fedora-%OS_VERSION%.repo
     install:
       - hyprland-git
-      - waybar
+      - hyprpanel
       - neovim
       - SwayNotificationCenter
       - hyprpolkitagent
@@ -41,7 +41,7 @@ modules:
   - type: systemd
     user:
       enabled:
-        - waybar.service
+        - hyprpanel.service
         - hyprpolkitagent.service
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully

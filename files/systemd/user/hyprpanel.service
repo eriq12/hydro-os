@@ -1,5 +1,5 @@
 [Unit]
-Description=Highly customizable Wayland bar for Sway and Wlroots based compositors.
+Description=A panel bar branched from AGS maintained by Hyprland devs.
 Documentation=man:waybar(5)
 # order startup after WM
 After=graphical-session.target
@@ -8,8 +8,7 @@ After=graphical-session.target
 Type=exec
 # Repurpose XDG Autostart filtering
 ExecCondition=/lib/systemd/systemd-xdg-autostart-condition "wlroots:sway:Wayfire:labwc:Hyprland" ""
-ExecStart=/usr/bin/waybar
-ExecReload=kill -SIGUSR2 $MAINPID
+ExecStart=/usr/bin/hyprpanel
 Restart=on-failure
 Slice=app-graphical.slice
 
