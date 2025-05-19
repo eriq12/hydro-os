@@ -1,0 +1,9 @@
+modules:
+  - type: default-flatpaks
+    notify: true
+    system:
+      install:
+        - one.ablaze.floorp
+    user:
+      install:
+        - com.discordapp.Discord
