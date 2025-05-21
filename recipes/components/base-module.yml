@@ -13,13 +13,6 @@ modules:
       - RUN rpm -ivh /ublue-os-luks.noarch.rpm
       - RUN rpm -ivh /ublue-os-just.noarch.rpm
   
-  - type: systemd
-    system:
-      enabled:
-        - rpm-ostreed.automatic.timer
-        - podman-auto-update.timer
-        - flatpak-system-update.timer
-    user:
-      enabled:
-        - podman-auto-update.timer
-        - flatpak-system-update.timer
+  - type: script
+    scripts:
+      - enableautoupdates.sh # using systemd did not work, so using this script instead
