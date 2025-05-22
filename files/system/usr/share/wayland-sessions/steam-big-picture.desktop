@@ -1,5 +1,5 @@
 [Desktop Entry]
 Name=Steam Big Picture Mode
 Comment=Start Steam in Big Picture Mode
-Exec=/usr/bin/gamescope -H 1080 -r 60 --force-composition -fe -- /usr/bin/steam -tenfoot
+Exec=/usr/bin/gamescope -H 1080 -r 60 --force-composition --mangoapp -fe -- /usr/bin/steam -tenfoot %U
 Type=Application

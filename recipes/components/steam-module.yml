@@ -4,6 +4,10 @@ modules:
       - rpmfusion
     install:
       - steam
+      # for game mode and big picture mode
+      - gamescope
+      # for performance view
+      - mangohud
   
   - type: default-flatpaks
     system:
