@@ -4,10 +4,11 @@ modules:
       copr:
         - solopasha/hyprland
     install:
-      - hyprland-git
-      - hyprpanel
-      - hyprpolkitagent
-      - hyprshot
+      packages:
+        - hyprland-git
+        - hyprpanel
+        - hyprpolkitagent
+        - hyprshot
 
   - type: systemd
     user:
