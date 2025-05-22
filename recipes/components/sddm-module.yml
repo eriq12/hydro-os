@@ -9,6 +9,10 @@ modules:
       - kwallet
       - pam-kwallet
 
+  - type: script
+    scripts:
+      - setsddmtheming.sh
+
   - type: systemd
     system:
       enabled:
