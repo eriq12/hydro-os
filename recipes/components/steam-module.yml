@@ -1,13 +1,14 @@
 modules:
-  - type: rpm-ostree
+  - type: dnf
     repos:
-      - rpmfusion
+      nonfree: rpmfusion
     install:
-      - steam
-      # for game mode and big picture mode
-      - gamescope
-      # for performance view
-      - mangohud
+      packages:
+        - steam
+        # for game mode and big picture mode
+        - gamescope
+        # for performance view
+        - mangohud
   
   - type: default-flatpaks
     system:

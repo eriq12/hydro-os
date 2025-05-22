@@ -17,69 +17,73 @@ modules:
     scripts:
       - enableautoupdates.sh # using systemd did not work, so using this script instead
   
-  - type: rpm-ostree
+  - type: dnf
+    repos:
+      copr:
+        - erikreider/SwayNotificationCenter
     install:
-    # environment
-      # fuzzy finder
-      - fzf
-      # power profiles like
-      - tuned-ppd
-      # xwayland
-      - xorg-x11-server-Xwayland
-      # headset control
-      - headsetcontrol
-      # media related
-      - mediainfo
-      - playerctl
-      - alsa-firmware
-      # nofitications
-      - SwayNotificationCenter
-      # text editor
-      - neovim
-      # tools for evocation
-      - just
-      # zip utilities
-      - p7zip
-      # qt libraries
-      - qt5-qtwayland
-      - qt6-qtwayland
-      # kirigami
-      - kf5-kirigami
-      - kf6-kirigami
-      - kf6-kirigami-addons
-      # emoji fonts
-      - google-noto-emoji-fonts
-      # vulkan
-      - vulkan-tools
-      - vulkan-validation-layers
+      packages: 
+      # environment
+        # fuzzy finder
+        - fzf
+        # power profiles like
+        - tuned-ppd
+        # xwayland
+        - xorg-x11-server-Xwayland
+        # headset control
+        - headsetcontrol
+        # media related
+        - mediainfo
+        - playerctl
+        - alsa-firmware
+        # nofitications
+        - SwayNotificationCenter
+        # text editor
+        - neovim
+        # tools for evocation
+        - just
+        # zip utilities
+        - p7zip
+        # qt libraries
+        - qt5-qtwayland
+        - qt6-qtwayland
+        # kirigami
+        - kf5-kirigami
+        - kf6-kirigami
+        - kf6-kirigami-addons
+        # emoji fonts
+        - google-noto-emoji-fonts
+        # vulkan
+        - vulkan-tools
+        - vulkan-validation-layers
 
 
-    # polkit
-      - polkit
-      - polkit-kde
-    
-    # sound
-      - wireplumber
-      - pipewire
-      - pamixer
-      - pulseaudio-utils
-    
-    # networking
-      - bluez
-      - bluez-tools
-      - firewall-config
-    
-    # kde stuff
-      - dolphin
-      - plasma-systemsettings
-    
-    # theme and GUI
-      - fontawesome-fonts-all
-      - gnome-themes-extra
-      - gnome-icon-theme
-      - paper-icon-theme
-      - breeze-icon-theme 
-      - papirus-icon-theme
+      # polkit
+        - polkit
+        - polkit-kde
+      
+      # sound
+        - wireplumber
+        - pipewire
+        - pamixer
+        - pulseaudio-utils
+      
+      # networking
+        - bluez
+        - bluez-tools
+        - firewall-config
+      
+      # kde stuff
+        - dolphin
+        - plasma-systemsettings
+      
+      # theme and GUI
+        - fontawesome-fonts-all
+        - gnome-themes-extra
+        - gnome-icon-theme
+        - paper-icon-theme
+        - breeze-icon-theme 
+        - papirus-icon-theme
 
   - type: script
     scripts:
