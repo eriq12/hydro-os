@@ -61,23 +61,13 @@ modules:
       - pulseaudio-utils
     
     # networking
-      - network-manager-applet
       - bluez
       - bluez-tools
       - firewall-config
     
-    # file manager
-      - thunar
-      - thunar-archive-plugin
-      - thunar-volman
-      - xarchiver
-      - imv
-      - gvfs-mtp
-      - gvfs-gphoto2
-      - gvfs-smb
-      - gvfs-nfs
-      - gvfs-fuse
-      - gvfs-archive
+    # kde stuff
+      - dolphin
+      - plasma-systemsettings
     
     # theme and GUI
       - fontawesome-fonts-all
