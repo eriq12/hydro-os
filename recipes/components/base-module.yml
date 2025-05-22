@@ -16,3 +16,78 @@ modules:
   - type: script
     scripts:
       - enableautoupdates.sh # using systemd did not work, so using this script instead
+  
+  - type: rpm-ostree
+    install:
+    # environment
+      # fuzzy finder
+      - fzf
+      # power profiles like
+      - tuned-ppd
+      # xwayland
+      - xorg-x11-server-Xwayland
+      # headset control
+      - headsetcontrol
+      # media related
+      - mediainfo
+      - playerctl
+      - alsa-firmware
+      # nofitications
+      - SwayNotificationCenter
+      # text editor
+      - neovim
+      # tools for evocation
+      - just
+      # zip utilities
+      - p7zip
+      # qt libraries
+      - qt5-qtwayland
+      - qt6-qtwayland
+      # emoji fonts
+      - google-noto-emoji-fonts
+      # vulkan
+      - vulkan-tools
+      - vulkan-validation-layers
+
+
+    # polkit
+      - polkit
+      - polkit-kde
+    
+    # sound
+      - wireplumber
+      - pipewire
+      - pamixer
+      - pulseaudio-utils
+    
+    # networking
+      - network-manager-applet
+      - bluez
+      - bluez-tools
+      - firewall-config
+    
+    # file manager
+      - thunar
+      - thunar-archive-plugin
+      - thunar-volman
+      - xarchiver
+      - imv
+      - gvfs-mtp
+      - gvfs-gphoto2
+      - gvfs-smb
+      - gvfs-nfs
+      - gvfs-fuse
+      - gvfs-archive
+    
+    # theme and GUI
+      - fontawesome-fonts-all
+      - gnome-themes-extra
+      - gnome-icon-theme
+      - paper-icon-theme
+      - breeze-icon-theme 
+      - papirus-icon-theme
+
+  - type: script
+    scripts:
+      - installproprietarypackages.sh
+
