@@ -1,0 +1,10 @@
+modules:
+  - type: rpm-ostree
+    repos:
+      - rpmfusion
+    install:
+      - steam
+  
+  - type: default-flatpaks
+    system:
+      - net.davidotek.pupgui2
