@@ -11,4 +11,5 @@ modules:
   
   - type: default-flatpaks
     system:
-      - net.davidotek.pupgui2
+      install:
+        - net.davidotek.pupgui2
