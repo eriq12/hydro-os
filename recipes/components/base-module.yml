@@ -43,6 +43,10 @@ modules:
       # qt libraries
       - qt5-qtwayland
       - qt6-qtwayland
+      # kirigami
+      - kf5-kirigami
+      - kf6-kirigami
+      - kf6-kirigami-addons
       # emoji fonts
       - google-noto-emoji-fonts
       # vulkan
