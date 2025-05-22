@@ -6,8 +6,6 @@ modules:
     install:
       - hyprland-git
       - hyprpanel
-      - neovim
-      - SwayNotificationCenter
       - hyprpolkitagent
       - hyprshot
 
