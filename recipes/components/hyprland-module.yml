@@ -9,9 +9,3 @@ modules:
         - hyprpanel
         - hyprpolkitagent
         - hyprshot
-
-  - type: systemd
-    user:
-      enabled:
-        - hyprpanel.service
-        - hyprpolkitagent.service
