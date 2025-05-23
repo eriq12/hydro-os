@@ -55,5 +55,5 @@
   "menus.dashboard.shortcuts.left.shortcut2.icon": "󰹕",
   "menus.dashboard.shortcuts.left.shortcut2.command": "uwsm app --net.cozic.joplin_desktop",
   "menus.dashboard.shortcuts.left.shortcut2.tooltip": "Joplin",
-  "menus.dashboard.shortcuts.left.shortcut4.command": "rofi -show drun -run-command \"uwsm app -- {cmd}\""
+  "menus.dashboard.shortcuts.left.shortcut4.command": "uwsm app -- $(wofi --show drun --define=drun-print_desktop_file=true)"
 }
