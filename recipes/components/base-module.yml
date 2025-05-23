@@ -85,6 +85,12 @@ modules:
       # software
         - gnome-software
         - gnome-software-rpm-ostree
+        
+    remove:
+      packages:
+        # remove firefox
+        - firefox
+        - firefox-langpacks
 
   - type: script
     scripts:
