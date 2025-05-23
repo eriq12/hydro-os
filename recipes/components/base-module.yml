@@ -81,6 +81,10 @@ modules:
         - paper-icon-theme
         - breeze-icon-theme 
         - papirus-icon-theme
+      
+      # software
+        - gnome-software
+        - gnome-software-rpm-ostree
 
   - type: script
     scripts:
