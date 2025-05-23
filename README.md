@@ -27,3 +27,8 @@ To rebase an existing atomic Fedora installation to the latest build:
   ```
 
 The `latest` tag will automatically point to the latest build. That build will still always use the Fedora version specified in `recipe.yml`, so you won't get accidentally updated to the next major version.
+
+
+# Attribution
+
+Thanks to [Wayblue](https://github.com/wayblueorg/wayblue) for how to get around some issues with sddm on an atomic distribution and how to create a working distro from the base Fedora image.

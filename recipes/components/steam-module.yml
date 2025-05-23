@@ -1,0 +1,16 @@
+modules:
+  - type: dnf
+    repos:
+      nonfree: rpmfusion
+    install:
+      packages:
+        - steam
+        # for game mode and big picture mode
+        - gamescope
+        # for performance view
+        - mangohud
+  
+  - type: default-flatpaks
+    system:
+      install:
+        - net.davidotek.pupgui2

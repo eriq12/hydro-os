@@ -6,43 +6,19 @@ name: hydro-os
 description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/bazzite-asus-nvidia
-image-version: latest # latest is also supported if you want new updates ASAP
+base-image: quay.io/fedora-ostree-desktops/base-atomic
+image-version: 42 # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  - type: files
-    files:
-      - source: system
-        destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
-
-  - type: rpm-ostree
-    repos:
-      - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-%OS_VERSION%/solopasha-hyprland-fedora-%OS_VERSION%.repo
-      - https://copr.fedorainfracloud.org/coprs/erikreider/SwayNotificationCenter/repo/fedora-%OS_VERSION%/erikreider-SwayNotificationCenter-fedora-%OS_VERSION%.repo
-    install:
-      - hyprland-git
-      - waybar
-      - neovim
-      - SwayNotificationCenter
-      - hyprpolkitagent
-      - hyprshot
-
-  - type: default-flatpaks
-    notify: true # Send notification after install/uninstall is finished (true/false)
-    system:
-      # If no repo information is specified, Flathub will be used by default
-      install:
-        - one.ablaze.floorp
-        - com.discordapp.Discord
-    user: {} # Also add Flathub user repo, but no user packages
-
-  - type: systemd
-    user:
-      enabled:
-        - waybar.service
-        - hyprpolkitagent.service
+  - from-file: components/sddm-module.yml
+  - from-file: components/base-module.yml
+  - from-file: components/nvidia-module.yml
+  - from-file: components/sys-files-module.yml
+  - from-file: components/hyprland-module.yml
+  - from-file: components/steam-module.yml
+  - from-file: components/default-flatpak.yml
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 

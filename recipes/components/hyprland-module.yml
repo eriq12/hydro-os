@@ -1,0 +1,11 @@
+modules:
+  - type: dnf
+    repos:
+      copr:
+        - solopasha/hyprland
+    install:
+      packages:
+        - hyprland-git
+        - hyprpanel
+        - hyprpolkitagent
+        - hyprshot

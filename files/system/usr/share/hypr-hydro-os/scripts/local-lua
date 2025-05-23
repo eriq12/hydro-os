@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-BIN_DIR=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
-
-LUA_PATH="${BIN_DIR}/?.lua;;" lua $1

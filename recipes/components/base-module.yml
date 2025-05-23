@@ -1,0 +1,96 @@
+modules:
+  - type: containerfile
+    snippets:
+      - COPY --from=ghcr.io/ublue-os/config:latest /rpms/ublue-os-udev-rules.noarch.rpm /
+      - COPY --from=ghcr.io/ublue-os/config:latest /rpms/ublue-os-update-services.noarch.rpm /
+      - COPY --from=ghcr.io/ublue-os/config:latest /rpms/ublue-os-signing.noarch.rpm /
+      - RUN rpm -ivh /ublue-os-udev-rules.noarch.rpm
+      - RUN rpm -ivh /ublue-os-update-services.noarch.rpm
+      - RUN rpm -ivh /ublue-os-signing.noarch.rpm
+  
+  - type: script
+    scripts:
+      - enableautoupdates.sh # using systemd did not work, so using this script instead
+  
+  - type: dnf
+    repos:
+      copr:
+        - erikreider/SwayNotificationCenter
+    install:
+      packages: 
+      # environment
+        # fuzzy finder
+        - fzf
+        # power profiles like
+        - tuned-ppd
+        # xwayland
+        - xorg-x11-server-Xwayland
+        # headset control
+        - headsetcontrol
+        # media related
+        - mediainfo
+        - playerctl
+        - alsa-firmware
+        # nofitications
+        - SwayNotificationCenter
+        # text editor
+        - neovim
+        # tools for evocation
+        - just
+        # zip utilities
+        - p7zip
+        # qt libraries
+        - qt5-qtwayland
+        - qt6-qtwayland
+        # emoji fonts
+        - google-noto-emoji-fonts
+        # vulkan
+        - vulkan-tools
+        - vulkan-validation-layers
+
+      # polkit
+        - polkit
+      
+      # sound
+        - wireplumber
+        - pipewire
+        - pamixer
+        - pulseaudio-utils
+      
+      # networking
+        - bluez
+        - bluez-tools
+        - firewall-config
+      
+      # file manager
+        - nautilus
+        - file-roller
+        - file-roller-nautilus
+        - nextcloud-client
+        - nextcloud-client-nautilus
+      
+      # theme and GUI
+        - fontawesome-fonts-all
+        - gnome-themes-extra
+        - gnome-icon-theme
+        - paper-icon-theme
+        - breeze-icon-theme 
+        - papirus-icon-theme
+      
+      # software
+        - gnome-software
+        - gnome-software-rpm-ostree
+      
+      # power
+        - powerstat
+
+    remove:
+      packages:
+        # remove firefox
+        - firefox
+        - firefox-langpacks
+
+  - type: script
+    scripts:
+      - installproprietarypackages.sh
+

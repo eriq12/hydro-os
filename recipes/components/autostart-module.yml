@@ -1,0 +1,10 @@
+modules:
+  - type: systemd
+    user:
+      enabled:
+        - hyprpanel.service
+        - hyprpolkitagent.service
+        - discord.service
+        - floorp.service
+        - steam.service
+        - terminal.service
