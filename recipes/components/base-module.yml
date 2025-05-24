@@ -66,8 +66,6 @@ modules:
         - nautilus
         - file-roller
         - file-roller-nautilus
-        - nextcloud-client
-        - nextcloud-client-nautilus
       
       # theme and GUI
         - fontawesome-fonts-all
@@ -79,7 +77,6 @@ modules:
       
       # software
         - gnome-software
-        - gnome-software-rpm-ostree
       
       # power
         - powerstat
