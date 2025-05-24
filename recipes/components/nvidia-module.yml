@@ -1,6 +1,6 @@
 modules:
   - type: dnf
-    repo:
+    repos:
       nonfree: rpmfusion
     install:
       packages:
