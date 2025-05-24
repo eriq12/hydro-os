@@ -7,7 +7,7 @@ After=graphical-session.target
 Type=exec
 # Repurpose XDG Autostart filtering
 ExecCondition=/lib/systemd/systemd-xdg-autostart-condition "wlroots:sway:Wayfire:labwc:Hyprland" ""
-ExecStart=/usr/bin/kitty
+ExecStart=hyprctl dispatch exec [workspace special:terminal silent] /usr/bin/kitty
 Slice=app-graphical.slice
 
 [Install]
