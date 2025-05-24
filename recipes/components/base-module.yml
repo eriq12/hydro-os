@@ -1,7 +1,8 @@
 modules:
   - type: dnf
     repos:
-      - ublue-os/packages
+      copr:
+        - ublue-os/packages
     install:
       packages:
         - ublue-os-udev-rules
