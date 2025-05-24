@@ -1,12 +1,12 @@
 modules:
-  - type: containerfile
-    snippets:
-      - COPY --from=ghcr.io/ublue-os/config:latest /rpms/ublue-os-udev-rules.noarch.rpm /
-      - COPY --from=ghcr.io/ublue-os/config:latest /rpms/ublue-os-update-services.noarch.rpm /
-      - COPY --from=ghcr.io/ublue-os/config:latest /rpms/ublue-os-signing.noarch.rpm /
-      - RUN rpm -ivh /ublue-os-udev-rules.noarch.rpm
-      - RUN rpm -ivh /ublue-os-update-services.noarch.rpm
-      - RUN rpm -ivh /ublue-os-signing.noarch.rpm
+  - type: dnf
+    repos:
+      - ublue-os/packages
+    install:
+      packages:
+        - ublue-os-udev-rules
+        - ublue-os-update-services
+        - ublue-os-signing
   
   - type: script
     scripts:
