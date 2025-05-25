@@ -8,7 +8,6 @@ modules:
     
   - type: script
     scripts:
-      - nvidia/setearlyloading.sh
       - nvidia/setdrmvariables.sh
 
   - type: systemd
