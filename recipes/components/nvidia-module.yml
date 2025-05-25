@@ -10,9 +10,9 @@ modules:
     scripts:
       - nvidia/setdrmvariables.sh
 
-  - type: systemd
-    system:
-      enabled:
-        - nvidia-suspend.service
-        - nvidia-hibernate.service
-        - nvidia-resume.service
+  #- type: systemd
+  #  system:
+  #    enabled:
+  #      - nvidia-suspend.service
+  #      - nvidia-hibernate.service
+  #      - nvidia-resume.service
