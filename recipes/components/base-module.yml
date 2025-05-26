@@ -9,9 +9,16 @@ modules:
         - ublue-os-update-services
         - ublue-os-signing
   
-  - type: script
-    scripts:
-      - enableautoupdates.sh # using systemd did not work, so using this script instead
+  - type: systemd
+    system:
+      enabled:
+        - rpm-ostreed-automatic.timer
+        - podman-auto-update.timer
+        - flatpak-system-update.timer
+    user:
+      enabled:
+        - podman-auto-update.timer
+        - flatpak-user-update.timer
   
   - type: dnf
     repos:
