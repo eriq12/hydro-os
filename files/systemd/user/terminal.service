@@ -1,5 +1,5 @@
 [Unit]
-Description=The pc gaming platform
+Description=The Kitty terminal emulator.
 # order startup after WM
 After=graphical-session.target
 

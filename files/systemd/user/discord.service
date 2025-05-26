@@ -1,5 +1,5 @@
 [Unit]
-Description=The pc gaming platform
+Description=The VoIP program targeted towards gaming.
 # order startup after WM
 After=graphical-session.target
 
