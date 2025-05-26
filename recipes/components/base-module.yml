@@ -24,7 +24,6 @@ modules:
     repos:
       copr:
         - erikreider/SwayNotificationCenter
-      nonfree: rpmfusion
     install:
       packages: 
       # environment
@@ -96,6 +95,9 @@ modules:
         - firefox
         - firefox-langpacks
 
+  - type: dnf
+    repos:
+      nonfree: rpmfusion
     replace:
       - from-repo: rpmfusion-nonfree-updates
         packages:
