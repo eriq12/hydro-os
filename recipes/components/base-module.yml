@@ -97,7 +97,7 @@ modules:
         - firefox-langpacks
 
     replace:
-      - from-repo: rpmfusion
+      - from-repo: rpmfusion-nonfree-updates
         packages:
           - libheif
           - libva
