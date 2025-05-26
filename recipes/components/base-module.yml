@@ -24,6 +24,7 @@ modules:
     repos:
       copr:
         - erikreider/SwayNotificationCenter
+      nonfree: negativo17
     install:
       packages: 
       # environment
@@ -95,9 +96,6 @@ modules:
         - firefox
         - firefox-langpacks
 
-  - type: dnf
-    repos:
-      nonfree: negativo17
     replace:
       - from-repo: fedora-multimedia
         packages:
