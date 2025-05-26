@@ -99,7 +99,7 @@ modules:
     repos:
       nonfree: rpmfusion
     replace:
-      - from-repo: rpmfusion-nonfree-updates
+      - from-repo: rpmfusion-nonfree
         packages:
           - libheif
           - libva
