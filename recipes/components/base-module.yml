@@ -24,7 +24,7 @@ modules:
     repos:
       copr:
         - erikreider/SwayNotificationCenter
-      nonfree: negativo17
+      nonfree: rpmfusion
     install:
       packages: 
       # environment
@@ -97,7 +97,7 @@ modules:
         - firefox-langpacks
 
     replace:
-      - from-repo: fedora-multimedia
+      - from-repo: rpmfusion
         packages:
           - libheif
           - libva
