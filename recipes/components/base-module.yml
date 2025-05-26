@@ -88,7 +88,23 @@ modules:
         - firefox
         - firefox-langpacks
 
-  - type: script
-    scripts:
-      - installproprietarypackages.sh
+  - type: dnf
+    replace:
+      - from-repo: negativo17
+        packages:
+          - libheif
+          - libva
+          - libva-intel-media-driver
+          - mesa-dri-drivers
+          - mesa-filesystem
+          - mesa-libEGL
+          - mesa-libGL
+          - mesa-libgbm
+          - mesa-libxatracker
+          - mesa-va-drivers
+          - mesa-vulkan-drivers
+          - gstreamer1-plugin-libav
+          - gstreamer1-plugin-vaapi
+          - rar
+    
 
