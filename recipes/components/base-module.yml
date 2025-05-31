@@ -21,9 +21,6 @@ modules:
         - flatpak-user-update.timer
   
   - type: dnf
-    repos:
-      copr:
-        - erikreider/SwayNotificationCenter
     install:
       packages: 
       # environment
@@ -39,8 +36,6 @@ modules:
         - mediainfo
         - playerctl
         - alsa-firmware
-        # nofitications
-        - SwayNotificationCenter
         # text editor
         - neovim
         # tools for evocation
