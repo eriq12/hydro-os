@@ -1,17 +1,14 @@
 name: bluebuild-nvidia
 on:
+  schedule:
+    - cron:
+        "00 06 * * *" # build at 06:00 UTC every day
+        # (20 minutes after last ublue images start building)
   push:
     branches:
       - main
-    paths: # rebuild only if nvidia files have changed
-      - ".github/workflows/build-nvidia.yml"
-      - "files/scripts/nvidia/**"
-      - "recipes/components/nvidia-module.yml"
-      - "recipes/recipe_nvidia.yml"
-  workflow_dispatch: # allow manually triggering builds
-  workflow_run:
-    workflows: ["bluebuild"]
-    types: [completed]
+    paths-ignore: # don't rebuild if only documentation has changed
+      - "**.md"
 concurrency:
   # only run one build at a time
   group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
