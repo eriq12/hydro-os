@@ -9,10 +9,6 @@ on:
       - main
     paths-ignore: # don't rebuild if only documentation has changed
       - "**.md"
-      - ".github/workflows/build-nvidia.yml"
-      - "files/scripts/nvidia/**"
-      - "recipes/components/nvidia-module.yml"
-      - "recipes/recipe_nvidia.yml"
 
   pull_request:
   workflow_dispatch: # allow manually triggering builds
@@ -33,7 +29,7 @@ jobs:
       matrix:
         recipe:
           # !! Add your recipes here
-          - recipe.yml
+          - recipe_nvidia.yml
     steps:
       # the build is fully handled by the reusable github action
       - name: Build Custom Image
