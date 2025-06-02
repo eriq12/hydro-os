@@ -13,7 +13,6 @@ on:
       - "files/scripts/nvidia/**"
       - "recipes/components/nvidia-module.yml"
       - "recipes/recipe_nvidia.yml"
-
   pull_request:
   workflow_dispatch: # allow manually triggering builds
 concurrency:
