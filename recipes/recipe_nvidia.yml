@@ -17,9 +17,11 @@ modules:
   - from-file: components/nvidia-module.yml
   - from-file: components/sys-files-module.yml
   - from-file: components/hyprland-module.yml
+  - from-file: components/zsh-module.yml
   - from-file: components/steam-module.yml
   - from-file: components/autostart-module.yml
   - from-file: components/default-flatpak.yml
+  - from-file: components/chezmoi-module.yml
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
 
