@@ -6,6 +6,7 @@ modules:
         - one.ablaze.floorp
         - com.github.tchx84.Flatseal
         - io.missioncenter.MissionCenter
+        - io.github.flattool.Warehouse
     user:
       install:
         - com.discordapp.Discord

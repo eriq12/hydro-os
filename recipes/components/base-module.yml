@@ -78,9 +78,6 @@ modules:
         - breeze-icon-theme 
         - papirus-icon-theme
       
-      # software
-        - gnome-software
-      
       # power
         - powerstat
 
