@@ -1,0 +1,13 @@
+[Unit]
+Description=Notify the user when the next update has been downloaded.
+# order after update has been applied
+After=bootc-status-updated.target
+
+[Service]
+Type=exec
+# For when only in graphical session
+ExecCondition=/lib/systemd/systemd-xdg-autostart-condition "wlroots:sway:Wayfire:labwc:Hyprland" ""
+ExecStart=/usr/bin/notify-send "New system update downloaded\!"
+
+[Install]
+WantedBy=bootc-status-updated.target

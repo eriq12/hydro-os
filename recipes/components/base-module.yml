@@ -6,13 +6,12 @@ modules:
     install:
       packages:
         - ublue-os-udev-rules
-        - ublue-os-update-services
         - ublue-os-signing
   
   - type: systemd
     system:
       enabled:
-        - rpm-ostreed-automatic.timer
+        - bootc-fetch-apply-updates.timer
         - podman-auto-update.timer
         - flatpak-system-update.timer
     user:
