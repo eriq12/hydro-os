@@ -49,6 +49,9 @@ modules:
         # vulkan
         - vulkan-tools
         - vulkan-validation-layers
+      
+      # dmenu runner
+        - fuzzel
 
       # polkit
         - polkit
