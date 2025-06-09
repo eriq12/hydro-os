@@ -2,6 +2,9 @@ modules:
   - type: dnf
     repos:
       nonfree: rpmfusion
+      copr:
+        enable:
+          - atim/xpadneo
     install:
       packages:
         - steam
@@ -9,6 +12,7 @@ modules:
         - gamescope
         # for performance view
         - mangohud
+        - xpadneo
   
   - type: default-flatpaks
     system:
