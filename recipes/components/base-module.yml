@@ -14,11 +14,11 @@ modules:
         - bootc-fetch-apply-updates.timer
         - podman-auto-update.timer
         - flatpak-system-update.timer
-        - notify_update.service
     user:
       enabled:
         - podman-auto-update.timer
         - flatpak-user-update.timer
+        - notify-update.service
   
   - type: dnf
     install:
