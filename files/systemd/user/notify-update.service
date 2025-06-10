@@ -6,7 +6,7 @@ After=bootc-status-updated.target
 [Service]
 Type=exec
 ExecCondition=/lib/systemd/systemd-xdg-autostart-condition "wlroots:sway:Wayfire:labwc:Hyprland" ""
-ExecStart=/usr/bin/notify-send "New system update downloaded\!"
+ExecStart=/usr/bin/systemd-run --user notify-send 'Update Downloaded!' 'A new update has been downloaded! Please restart to apply update!'
 
 [Install]
 WantedBy=bootc-status-updated.target
