@@ -59,6 +59,20 @@ modules:
 
       # polkit
         - polkit
+
+      # password keeper
+        - kf6-kwallet
+        - kf5-kwallet
+        - kwalletmanager5
+        - pam-kwallet
+      
+      # signon
+        - signon
+        - signon-kwallet-extension
+        - signon-plugin-oauth2
+        - signon-qt5
+        - signon-qt6
+        - signon-ui
       
       # sound
         - wireplumber
