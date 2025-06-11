@@ -11,7 +11,7 @@ modules:
   - type: systemd
     system:
       enabled:
-        - bootc-fetch-apply-updates.timer
+        - bootc-fetch-updates.timer
         - podman-auto-update.timer
         - flatpak-system-update.timer
         - notify-update.service
@@ -19,6 +19,7 @@ modules:
       enabled:
         - podman-auto-update.timer
         - flatpak-user-update.timer
+        - unlock-wallet.service
   
   - type: dnf
     install:
