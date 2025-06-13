@@ -21,6 +21,7 @@ modules:
         - unlock-kwallet.service
         - notify-update.service
         - swww.service
+        - bootc-status-updated.path
   
   - type: dnf
     install:
