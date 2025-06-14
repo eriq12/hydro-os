@@ -18,6 +18,7 @@ modules:
         - bootc-fetch-updates.timer
         - podman-auto-update.timer
         - flatpak-system-update.timer
+        - flag-update-downloaded.service
     user:
       enabled:
         - podman-auto-update.timer
