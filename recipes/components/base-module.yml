@@ -13,20 +13,14 @@ modules:
       - addimageinfo.sh
 
   - type: systemd
-    system:
-      enabled:
-        - bootc-fetch-updates.timer
-        - podman-auto-update.timer
-        - flatpak-system-update.timer
-        - flag-update-downloaded.service
     user:
       enabled:
-        - podman-auto-update.timer
-        - flatpak-user-update.timer
         - unlock-kwallet.service
-        - notify-update.service
-        - bootc-status-updated.path
   
+  - type: bling
+    install:
+    - ublue-update
+
   - type: dnf
     install:
       packages: 
