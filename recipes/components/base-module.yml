@@ -20,7 +20,6 @@ modules:
         - flatpak-user-update.timer
         - unlock-kwallet.service
         - notify-update.service
-        - swww.service
         - bootc-status-updated.path
   
   - type: dnf

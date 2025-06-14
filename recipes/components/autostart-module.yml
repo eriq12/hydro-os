@@ -2,6 +2,7 @@ modules:
   - type: systemd
     user:
       enabled:
+        - swww.service
         - hyprpanel.service
         - hyprpolkitagent.service
         - discord.service
