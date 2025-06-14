@@ -7,23 +7,20 @@ modules:
       packages:
         - ublue-os-udev-rules
         - ublue-os-signing
-  
-  - type: dnf
-    repos:
-      copr:
-        - ublue-os/bling
-    install:
-      packages:
-        - ublue-update
 
   - type: script
     scripts:
       - addimageinfo.sh
 
   - type: systemd
+    system:
+      enabled:
+        - bootc-fetch-updates.timer
+        - flatpak-system-update.timer
     user:
       enabled:
         - unlock-kwallet.service
+        - flatpak-user-update.timer
 
   - type: dnf
     install:
