@@ -3,10 +3,12 @@ modules:
     repos:
       copr:
         - ublue-os/packages
+        - ublue-os/bling
     install:
       packages:
         - ublue-os-udev-rules
         - ublue-os-signing
+        - ublue-update
   
   - type: script
     scripts:
@@ -16,10 +18,6 @@ modules:
     user:
       enabled:
         - unlock-kwallet.service
-  
-  - type: bling
-    install:
-    - ublue-update
 
   - type: dnf
     install:
