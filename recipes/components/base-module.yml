@@ -3,13 +3,19 @@ modules:
     repos:
       copr:
         - ublue-os/packages
-        - ublue-os/bling
     install:
       packages:
         - ublue-os-udev-rules
         - ublue-os-signing
-        - ublue-update
   
+  - type: dnf
+    repos:
+      copr:
+        - ublue-os/bling
+    install:
+      packages:
+        - ublue-update
+
   - type: script
     scripts:
       - addimageinfo.sh
