@@ -8,6 +8,10 @@ modules:
         - ublue-os-udev-rules
         - ublue-os-signing
   
+  - type: script
+    scripts:
+      - addimageinfo.sh
+
   - type: systemd
     system:
       enabled:
