@@ -1,0 +1,10 @@
+[Unit]
+Description=Create a file to flag that an update has been downloaded
+After=bootc-status-updated.target
+
+[Service]
+Type=exec
+ExecStart=/usr/bin/touch /tmp/hydro-os-updated
+
+[Install]
+WantedBy=bootc-status-updated.target
