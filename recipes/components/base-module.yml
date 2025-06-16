@@ -45,9 +45,6 @@ modules:
         # qt libraries
         - qt5-qtwayland
         - qt6-qtwayland
-        # qt ct packages
-        - qt5ct
-        - qt6ct
         # vulkan
         - vulkan-tools
         - vulkan-validation-layers

@@ -3,9 +3,19 @@ modules:
     repos:
       copr:
         - peterwu/rendezvous
+        - solopasha/hyprland
     install:
       skip-unavailable: true
       packages:
+      # settings apps
+        # qt
+        - qt5ct
+        - qt6ct
+
+        # gtk
+        - nwg-look
+      
+      # Themes and fonts
         # emoji fonts
         - google-noto-emoji-fonts
       
