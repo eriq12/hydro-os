@@ -1,0 +1,15 @@
+modules:
+  - type: dnf
+    install:
+      skip-unavailable: true
+      packages:
+        # fuzzy finder
+        - fzf
+      
+        # dmenu runner
+        - fuzzel
+      
+        # file manager
+        - nautilus
+        - file-roller
+        - file-roller-nautilus

@@ -26,8 +26,6 @@ modules:
     install:
       packages: 
       # environment
-        # fuzzy finder
-        - fzf
         # power profiles like
         - tuned-ppd
         # xwayland
@@ -50,14 +48,9 @@ modules:
         # qt ct packages
         - qt5ct
         - qt6ct
-        # emoji fonts
-        - google-noto-emoji-fonts
         # vulkan
         - vulkan-tools
         - vulkan-validation-layers
-      
-      # dmenu runner
-        - fuzzel
 
       # polkit
         - polkit
@@ -72,19 +65,6 @@ modules:
         - bluez
         - bluez-tools
         - firewall-config
-      
-      # file manager
-        - nautilus
-        - file-roller
-        - file-roller-nautilus
-      
-      # theme and GUI
-        - fontawesome-fonts-all
-        - gnome-themes-extra
-        - gnome-icon-theme
-        - paper-icon-theme
-        - breeze-icon-theme 
-        - papirus-icon-theme
       
       # power
         - powerstat

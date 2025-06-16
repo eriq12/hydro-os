@@ -14,6 +14,8 @@ image-version: 42 # latest is also supported if you want new updates ASAP
 modules:
   - from-file: components/sddm-module.yml
   - from-file: components/base-module.yml
+  - from-file: components/additional-stuff-module.yml
+  - from-file: components/appearance-module.yml
   - from-file: components/nvidia-module.yml
   - from-file: components/sys-files-module.yml
   - from-file: components/hyprland-module.yml
