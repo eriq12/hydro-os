@@ -65,6 +65,12 @@ modules:
       
       # power
         - powerstat
+      
+      # software
+        - gnome-software
+
+      # disk management
+        - gnome-disk-utility
 
     remove:
       packages:
