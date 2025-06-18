@@ -19,7 +19,6 @@ modules:
         - flatpak-system-update.timer
     user:
       enabled:
-        - unlock-kwallet.service
         - flatpak-user-update.timer
 
   - type: dnf
@@ -36,8 +35,6 @@ modules:
         - mediainfo
         - playerctl
         - alsa-firmware
-        # text editor
-        - neovim
         # tools for evocation
         - just
         # zip utilities
@@ -65,12 +62,6 @@ modules:
       
       # power
         - powerstat
-      
-      # software
-        - gnome-software
-
-      # disk management
-        - gnome-disk-utility
 
     remove:
       packages:

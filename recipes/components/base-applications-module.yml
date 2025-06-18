@@ -13,3 +13,15 @@ modules:
         - nautilus
         - file-roller
         - file-roller-nautilus
+
+        # text editor
+        - neovim
+      
+        # software store
+        - gnome-software
+
+        # disk management
+        - gnome-disk-utility
+
+        # kdeconnect
+        - kde-connect
