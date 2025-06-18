@@ -27,3 +27,7 @@ modules:
         - breeze-icon-theme 
         - papirus-icon-theme
         - bibata-cursor-themes
+  
+  - type: gschema-overrides
+    include:
+      - zz1-hydro-os-theming.gschema.override
