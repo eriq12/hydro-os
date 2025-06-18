@@ -35,8 +35,6 @@ modules:
         - mediainfo
         - playerctl
         - alsa-firmware
-        # tools for evocation
-        - just
         # zip utilities
         - p7zip
         # qt libraries
