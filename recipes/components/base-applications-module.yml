@@ -1,8 +1,5 @@
 modules:
   - type: dnf
-    repos:
-      copr:
-        - taw/joplin
     install:
       skip-unavailable: true
       packages:
@@ -28,6 +25,3 @@ modules:
 
         # kdeconnect
         - kde-connect
-
-        # note taking software
-        - joplin
