@@ -5,6 +5,3 @@ modules:
         - swww.service
         - hyprpanel.service
         - hyprpolkitagent.service
-        - discord.service
-        - steam.service
-        - terminal.service
