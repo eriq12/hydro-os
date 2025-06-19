@@ -1,3 +1,0 @@
-docker:
-  git.hydrosaber.com/IMAGENAME:
-    use-sigstore-attachments: true

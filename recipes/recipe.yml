@@ -24,6 +24,5 @@ modules:
   - from-file: components/default-flatpak.yml
   - from-file: components/chezmoi-module.yml
 
-  - type: hydro-os-signing
-    source: local
+  - type: signing
 

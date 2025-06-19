@@ -1,4 +1,0 @@
-name: hydro-os-signing
-shortdesc: The signing module is used to install the required signing policies for cosign image verification with rpm-ostree and bootc. Taken from wayblue.
-example: |
-  type: hydro-os-signing # This sets up the proper policy and signing files for signed images to work fully
