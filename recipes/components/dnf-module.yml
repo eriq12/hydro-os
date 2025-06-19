@@ -1,0 +1,160 @@
+modules:
+  - type: dnf
+    repos:
+      copr:
+        - ublue-os/packages
+        - solopasha/hyprland
+        - atim/xpadneo
+        - peterwu/rendezvous
+      nonfree: rpmfusion
+    install:
+      skip-unavailable: true
+      packages:
+      # sddm
+        - sddm
+        - sddm-themes
+        - qt5-qtgraphicaleffects
+        - qt5-qtquickcontrols2
+        - qt5-qtsvg
+
+      # password keeper
+        - kf6-kwallet
+        - kwalletmanager
+        - pam-kwallet
+      
+      # signon
+        - signon
+        - signon-kwallet-extension
+        - signon-plugin-oauth2
+        - signon-qt5
+        - signon-qt6
+        - signon-ui
+      
+      # hyprland
+        - hyprland-git
+        - hyprpanel
+        - hyprpolkitagent
+        - hyprshot
+
+      # ublue udev rules and signing
+        - ublue-os-udev-rules
+        - ublue-os-signing
+      
+      # environment
+        # power profiles like
+        - tuned-ppd
+        # xwayland
+        - xorg-x11-server-Xwayland
+        # headset control
+        - headsetcontrol
+        # media related
+        - mediainfo
+        - playerctl
+        - alsa-firmware
+        # zip utilities
+        - p7zip
+        # qt libraries
+        - qt5-qtwayland
+        - qt6-qtwayland
+        # vulkan
+        - vulkan-tools
+        - vulkan-validation-layers
+
+        # polkit
+        - polkit
+      
+        # sound
+        - wireplumber
+        - pipewire
+        - pamixer
+        - pulseaudio-utils
+      
+        # networking
+        - bluez
+        - bluez-tools
+        - firewall-config
+      
+        # power
+        - powerstat
+      
+      # applications
+        # fuzzy finder
+        - fzf
+      
+        # dmenu runner
+        - fuzzel
+      
+        # file manager
+        - nautilus
+        - file-roller
+        - file-roller-nautilus
+
+        # text editor
+        - neovim
+      
+        # software store
+        - gnome-software
+
+        # disk management
+        - gnome-disk-utility
+
+        # kdeconnect
+        - kde-connect
+      
+      # settings apps
+        # qt
+        - qt5ct
+        - qt6ct
+
+        # gtk
+        - nwg-look
+      
+      # Themes and fonts
+        # emoji fonts
+        - google-noto-emoji-fonts
+      
+        # theme and GUI
+        - fontawesome-fonts-all
+        - gnome-themes-extra
+        - gnome-icon-theme
+        - paper-icon-theme
+        - breeze-icon-theme 
+        - papirus-icon-theme
+        - bibata-cursor-themes
+
+      # zsh
+        - zsh
+        # sqlite for some autocomplete
+        - sqlite
+        # zoxide for z stuff
+        - zoxide
+
+      # steam
+        - steam
+        # for game mode and big picture mode
+        - gamescope
+        # for performance view
+        - mangohud
+        # controller
+        - xpadneo
+
+    remove:
+      packages:
+        # remove firefox
+        - firefox
+        - firefox-langpacks
+    
+    replace:
+      - from-repo: rpmfusion-nonfree
+        packages:
+          - libheif
+          - libva
+          - libva-intel-media-driver
+          - mesa-dri-drivers
+          - mesa-filesystem
+          - mesa-libEGL
+          - mesa-libGL
+          - mesa-libgbm
+          - mesa-va-drivers
+          - mesa-vulkan-drivers
+          - gstreamer1-plugin-libav

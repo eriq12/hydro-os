@@ -12,15 +12,10 @@ image-version: 42 # latest is also supported if you want new updates ASAP
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  - from-file: components/sddm-module.yml
-  - from-file: components/core-module.yml
-  - from-file: components/base-applications-module.yml
-  - from-file: components/appearance-module.yml
+  - from-file: components/dnf-module.yml
+  - from-file: components/script-module.yml
   - from-file: components/sys-files-module.yml
-  - from-file: components/hyprland-module.yml
-  - from-file: components/zsh-module.yml
-  - from-file: components/steam-module.yml
-  - from-file: components/autostart-module.yml
+  - from-file: components/systemd-module.yml
   - from-file: components/default-flatpak.yml
   - from-file: components/chezmoi-module.yml
 

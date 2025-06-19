@@ -1,0 +1,12 @@
+modules:
+  - type: systemd
+    system:
+      enabled:
+        - bootc-fetch-updates.timer
+        - flatpak-system-update.timer
+    user:
+      enabled:
+        - flatpak-user-update.timer
+        - swww.service
+        - hyprpanel.service
+        - hyprpolkitagent.service

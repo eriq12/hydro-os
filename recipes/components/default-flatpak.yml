@@ -3,10 +3,11 @@ modules:
     notify: true
     system:
       install:
-        - one.ablaze.floorp
         - com.github.tchx84.Flatseal
         - io.missioncenter.MissionCenter
         - io.github.flattool.Ignition
+        - net.davidotek.pupgui2
     user:
       install:
+        - one.ablaze.floorp
         - com.discordapp.Discord
