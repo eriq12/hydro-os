@@ -22,14 +22,6 @@ modules:
         - kwalletmanager
         - pam-kwallet
       
-      # signon
-        - signon
-        - signon-kwallet-extension
-        - signon-plugin-oauth2
-        - signon-qt5
-        - signon-qt6
-        - signon-ui
-      
       # hyprland
         - hyprland-git
         - hyprpanel
@@ -66,8 +58,6 @@ modules:
         # sound
         - wireplumber
         - pipewire
-        - pamixer
-        - pulseaudio-utils
       
         # networking
         - bluez
