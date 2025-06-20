@@ -106,16 +106,11 @@ modules:
         # theme and GUI
         - fontawesome-fonts-all
         - gnome-themes-extra
-        - gnome-icon-theme
-        - paper-icon-theme
-        - breeze-icon-theme 
         - papirus-icon-theme
         - bibata-cursor-themes
 
       # zsh
         - zsh
-        # sqlite for some autocomplete
-        - sqlite
         # zoxide for z stuff
         - zoxide
 
