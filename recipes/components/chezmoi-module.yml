@@ -1,3 +1,7 @@
 modules:
   - type: chezmoi
     repository: "https://git.hydrosaber.com/eriq12/dotfiles"
+
+  - type: script
+    scripts:
+      - setupchezmoiskel.sh
