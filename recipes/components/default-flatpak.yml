@@ -7,6 +7,7 @@ modules:
         - io.missioncenter.MissionCenter
         - io.github.flattool.Ignition
         - net.davidotek.pupgui2
+        - org.gnome.Loupe
     user:
       install:
         - one.ablaze.floorp
