@@ -10,4 +10,4 @@ modules:
     user:
       install:
         - one.ablaze.floorp
-        - com.discordapp.Discord
+        - io.github.equicord.equibop
