@@ -58,6 +58,7 @@ modules:
         # sound
         - wireplumber
         - pipewire
+        - headsetcontrol
       
         # networking
         - bluez
