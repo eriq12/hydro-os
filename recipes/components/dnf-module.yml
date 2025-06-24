@@ -4,11 +4,9 @@ modules:
       copr:
         - ublue-os/packages
         - solopasha/hyprland
-        - atim/xpadneo
         - peterwu/rendezvous
-      nonfree: rpmfusion
+      nonfree: negativo17
     install:
-      skip-unavailable: true
       packages:
       # sddm
         - sddm
@@ -121,8 +119,8 @@ modules:
         - gamescope
         # for performance view
         - mangohud
-        # controller
-        - xpadneo
+        # xpadneo
+        - dkms-xpadneo
 
     remove:
       packages:
@@ -131,7 +129,7 @@ modules:
         - firefox-langpacks
     
     replace:
-      - from-repo: rpmfusion-nonfree
+      - from-repo: fedora-multimedia
         packages:
           - libheif
           - libva
@@ -144,3 +142,7 @@ modules:
           - mesa-va-drivers
           - mesa-vulkan-drivers
           - gstreamer1-plugin-libav
+
+  - type: script
+    scripts:
+      - install-xpadneo.sh
