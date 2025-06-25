@@ -31,8 +31,6 @@ modules:
         - ublue-os-signing
       
       # environment
-        # power profiles like
-        - tuned-ppd
         # xwayland
         - xorg-x11-server-Xwayland
         # headset control
@@ -62,9 +60,6 @@ modules:
         - bluez
         - bluez-tools
         - firewall-config
-      
-        # power
-        - powerstat
       
       # applications
         # fuzzy finder
