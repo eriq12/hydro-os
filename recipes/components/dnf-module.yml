@@ -1,11 +1,16 @@
 modules:
   - type: dnf
     repos:
+      files:
+        - https://negativo17.org/repos/fedora-steam.repo
+        - https://negativo17.org/repos/fedora-multimedia.repo
+        - codium.repo
       copr:
         - ublue-os/packages
         - solopasha/hyprland
         - peterwu/rendezvous
-      nonfree: negativo17
+      keys:
+        - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg
     install:
       packages:
       # sddm
@@ -75,6 +80,7 @@ modules:
 
         # text editor
         - neovim
+        - codium
       
         # software store
         - gnome-software
