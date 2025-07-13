@@ -8,7 +8,6 @@ modules:
         - ublue-os/packages
         - solopasha/hyprland
         - peterwu/rendezvous
-        - atim/xpadneo
       keys:
         - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg
     install:
@@ -26,10 +25,13 @@ modules:
         - pam-kwallet
       
       # hyprland
+        - aquamarine-0.9.0-1.fc%OS_VERSION%.x86_64
         - hyprland-git
         - hyprpanel
         - hyprpolkitagent
         - hyprshot
+        - hyprland-qt-support
+        - hyprland-qtutils
 
       # ublue udev rules and signing
         - ublue-os-udev-rules
@@ -56,9 +58,11 @@ modules:
         - xdg-desktop-portal
         - xdg-desktop-portal-hyprland
         - xdg-desktop-portal-gtk
+        - xdg-desktop-portal-kde
 
         # polkit
         - polkit
+        - polkit-kde
       
         # sound
         - wireplumber
@@ -78,9 +82,9 @@ modules:
         - fuzzel
       
         # file manager
-        - nautilus
-        - file-roller
-        - file-roller-nautilus
+        - dolphin
+        - dolphin-plugins
+        - ark
 
         - ffmpegthumbnailer
 
@@ -89,10 +93,11 @@ modules:
         - codium
       
         # software store
-        - gnome-software
+        - plasma-discover
+        - plasma-discover-flatpak
 
         # disk management
-        - gnome-disk-utility
+        - kde-partitionmanager
 
         # kdeconnect
         - kde-connect
@@ -126,17 +131,19 @@ modules:
         - gamescope
         # for performance view
         - mangohud
-        # xpadneo
-        - xpadneo
+        # dkms for xpadneo
+        - dkms
       
+      # simple editing softare
+        - avidemux
+
+      # other multimedia
         - gstreamer1-plugin-libav
         - gstreamer1-plugins-bad-free-extras
         - gstreamer1-plugins-bad-freeworld
         - gstreamer1-plugins-ugly
         - gstreamer1-vaapi
-      
-      # other multimedia
-
+  
     remove:
       packages:
         # remove firefox
@@ -166,6 +173,16 @@ modules:
       packages:
         - ffmpeg
         - mesa-vdpau-drivers-freeworld
+
+  - type: dnf
+    repos:
+      files:
+        - https://negativo17.org/repos/fedora-steam.repo
+    install:
+      packages:
+        - repo: fedora-steam
+          packages:
+            - dkms-xpadneo
 
   - type: script
     scripts:
