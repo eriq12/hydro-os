@@ -4,6 +4,7 @@ modules:
       nonfree: rpmfusion
       files:
         - codium.repo
+        - https://openrazer.github.io/hardware:razer.repo
       copr:
         - ublue-os/packages
         - solopasha/hyprland
@@ -131,8 +132,9 @@ modules:
         - gamescope
         # for performance view
         - mangohud
-        # dkms for xpadneo
+        # dkms for xpadneo and open razer
         - dkms
+        - openrazer-meta
       
       # simple editing softare
         - avidemux
@@ -186,4 +188,4 @@ modules:
 
   - type: script
     scripts:
-      - install-xpadneo.sh
+      - installdkmsmodules.sh
