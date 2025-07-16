@@ -59,11 +59,10 @@ modules:
         - xdg-desktop-portal
         - xdg-desktop-portal-hyprland
         - xdg-desktop-portal-gtk
-        - xdg-desktop-portal-kde
+        - xdg-desktop-portal-gnome
 
         # polkit
         - polkit
-        - polkit-kde
       
         # sound
         - wireplumber
@@ -83,9 +82,9 @@ modules:
         - fuzzel
       
         # file manager
-        - dolphin
-        - dolphin-plugins
-        - ark
+        - nautilus
+        - file-roller
+        - file-roller-nautilus
 
         - ffmpegthumbnailer
 
@@ -94,11 +93,10 @@ modules:
         - codium
       
         # software store
-        - plasma-discover
-        - plasma-discover-flatpak
+        - gnome-software
 
         # disk management
-        - kde-partitionmanager
+        - gnome-disk-utility
 
         # kdeconnect
         - kde-connect
