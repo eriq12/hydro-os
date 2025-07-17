@@ -9,6 +9,7 @@ modules:
         - ublue-os/packages
         - solopasha/hyprland
         - peterwu/rendezvous
+        - mavit/discover-overlay
       keys:
         - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg
     install:
@@ -100,6 +101,9 @@ modules:
 
         # kdeconnect
         - kde-connect
+
+        # discord overlay
+        - discover-overlay
       
       # settings apps
         # qt
