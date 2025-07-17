@@ -1,0 +1,47 @@
+modules:
+  - type: dnf
+    repos:
+      files:
+        - codium.repo
+      copr:
+        - ublue-os/packages
+    install:
+      packages:
+      # ublue udev rules and signing
+        - ublue-os-udev-rules
+        - ublue-os-signing
+      
+      # environment
+        # xwayland
+        - xorg-x11-server-Xwayland
+        # headset control
+        - headsetcontrol
+        # media related
+        - mediainfo
+        - playerctl
+        - alsa-firmware
+        # zip utilities
+        - p7zip
+        # qt libraries
+        - qt5-qtwayland
+        - qt6-qtwayland
+        # vulkan
+        - vulkan-tools
+        - vulkan-validation-layers
+        # xdg-desktop-portals
+        - xdg-desktop-portal
+        - xdg-desktop-portal-gtk
+        - xdg-desktop-portal-gnome
+
+        # polkit
+        - polkit
+      
+        # sound
+        - wireplumber
+        - pipewire
+        - headsetcontrol
+      
+        # networking
+        - bluez
+        - bluez-tools
+        - firewall-config

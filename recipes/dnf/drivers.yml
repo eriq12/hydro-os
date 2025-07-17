@@ -1,0 +1,17 @@
+modules:
+  - type: dnf
+    repos:
+      files:
+        - https://negativo17.org/repos/fedora-steam.repo
+        - https://openrazer.github.io/hardware:razer.repo
+    install:
+      packages:
+        - dkms
+        - openrazer-meta
+        - repo: fedora-steam
+          packages:
+            - dkms-xpadneo
+
+  - type: script
+    scripts:
+      - installdkmsmodules.sh

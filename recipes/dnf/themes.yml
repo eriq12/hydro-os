@@ -1,0 +1,16 @@
+modules:
+  - type: dnf
+    repos:
+      copr:
+        - peterwu/rendezvous
+    install:
+      packages:
+      # Themes and fonts
+        # emoji fonts
+        - google-noto-emoji-fonts
+      
+        # theme and GUI
+        - fontawesome-fonts-all
+        - gnome-themes-extra
+        - papirus-icon-theme
+        - bibata-cursor-themes

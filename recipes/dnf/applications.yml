@@ -1,0 +1,71 @@
+modules:
+  - type: dnf
+    repos:
+      nonfree: rpmfusion
+      files:
+        - codium.repo
+        - https://openrazer.github.io/hardware:razer.repo
+      copr:
+        - mavit/discover-overlay
+      keys:
+        - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg
+    install:
+      packages:
+      # applications
+        # fuzzy finder
+        - fzf
+      
+        # dmenu runner
+        - fuzzel
+      
+        # file manager
+        - nautilus
+        - file-roller
+        - file-roller-nautilus
+
+        - ffmpegthumbnailer
+
+        # text editor
+        - neovim
+        - codium
+      
+        # software store
+        - gnome-software
+
+        # disk management
+        - gnome-disk-utility
+
+        # kdeconnect
+        - kde-connect
+
+        # discord overlay
+        - discover-overlay
+      
+      # settings apps
+        # qt
+        - qt5ct
+        - qt6ct
+
+        # gtk
+        - nwg-look
+
+      # zsh
+        - zsh
+        # zoxide for z stuff
+        - zoxide
+
+      # steam
+        - steam
+        # for game mode and big picture mode
+        - gamescope
+        # for performance view
+        - mangohud
+      
+      # simple editing softare
+        - avidemux
+  
+    remove:
+      packages:
+        # remove firefox
+        - firefox
+        - firefox-langpacks
