@@ -9,4 +9,5 @@ modules:
         - flatpak-user-update.timer
         - swww.service
         - hyprpanel.service
+        # - quickshell.service
         - hyprpolkitagent.service

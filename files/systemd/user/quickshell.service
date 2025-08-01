@@ -7,7 +7,7 @@ After=graphical-session.target
 Type=exec
 # Repurpose XDG Autostart filtering
 ExecCondition=/lib/systemd/systemd-xdg-autostart-condition "wlroots:sway:Wayfire:labwc:Hyprland" ""
-ExecStart=/usr/bin/hyprpanel
+ExecStart=/usr/bin/quickshell
 Restart=on-failure
 Slice=app-graphical.slice
 

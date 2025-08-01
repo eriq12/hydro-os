@@ -3,13 +3,21 @@ modules:
     repos:
       copr:
         - solopasha/hyprland
+        - errornointernet/quickshell
     install:
       packages:
         - aquamarine
         - hyprland-git
-        - hyprpanel
         - hyprpolkitagent
         - hyprshot
         - hyprland-qt-support
         - hyprland-qtutils
         - xdg-desktop-portal-hyprland
+        - swww
+        - matugen
+
+        # hyprpanel
+        - hyprpanel
+
+        # quickshell
+        - quickshell
