@@ -9,12 +9,11 @@ on:
       - main
     paths-ignore: # don't rebuild if only documentation has changed
       - "**.md"
-      - ".github/workflows/build-nvidia.yml"
-      - "files/scripts/nvidia/**"
-      - "recipes/components/nvidia-module.yml"
-      - "recipes/recipe_nvidia.yml"
-  pull_request:
   workflow_dispatch: # allow manually triggering builds
+concurrency:
+  # only run one build at a time
+  group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
+  cancel-in-progress: true
 jobs:
   bluebuild:
     name: Build Custom Image
@@ -43,3 +42,4 @@ jobs:
 
           # enabled by default, disable if your image is small and you want faster builds
           maximize_build_space: true
+          rechunk: true

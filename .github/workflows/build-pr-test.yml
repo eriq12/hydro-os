@@ -1,6 +1,11 @@
-name: bluebuild-nvidia
+name: bluebuild test pr
 on:
+  pull_request:
   workflow_dispatch: # allow manually triggering builds
+concurrency:
+  # only run one build at a time
+  group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
+  cancel-in-progress: true
 jobs:
   bluebuild:
     name: Build Custom Image
@@ -14,8 +19,9 @@ jobs:
       matrix:
         recipe:
           # !! Add your recipes here
-          - recipe_nvidia.yml
+          - recipe.yml
     steps:
+      
       # the build is fully handled by the reusable github action
       - name: Build Custom Image
         uses: blue-build/github-action@v1.8
