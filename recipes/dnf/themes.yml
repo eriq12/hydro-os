@@ -14,3 +14,4 @@ modules:
         - gnome-themes-extra
         - papirus-icon-theme
         - bibata-cursor-themes
+        - material-icons-fonts

@@ -4,7 +4,6 @@ modules:
       nonfree: rpmfusion
       files:
         - codium.repo
-        - https://openrazer.github.io/hardware:razer.repo
       copr:
         - mavit/discover-overlay
       keys:
@@ -24,6 +23,9 @@ modules:
         - file-roller-nautilus
 
         - ffmpegthumbnailer
+
+        # music / video player
+        - vlc
 
         # text editor
         - neovim
@@ -60,9 +62,6 @@ modules:
         - gamescope
         # for performance view
         - mangohud
-      
-      # simple editing softare
-        - avidemux
   
     remove:
       packages:

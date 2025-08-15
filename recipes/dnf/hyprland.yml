@@ -16,8 +16,5 @@ modules:
         - swww
         - matugen
 
-        # hyprpanel
-        - hyprpanel
-
         # quickshell
         - quickshell
