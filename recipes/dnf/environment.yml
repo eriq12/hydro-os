@@ -1,8 +1,6 @@
 modules:
   - type: dnf
     repos:
-      files:
-        - codium.repo
       copr:
         - ublue-os/packages
     install:
@@ -14,20 +12,26 @@ modules:
       # environment
         # xwayland
         - xorg-x11-server-Xwayland
+
         # headset control
         - headsetcontrol
+
         # media related
         - mediainfo
         - playerctl
         - alsa-firmware
+
         # zip utilities
         - p7zip
+
         # qt libraries
         - qt5-qtwayland
         - qt6-qtwayland
+
         # vulkan
         - vulkan-tools
         - vulkan-validation-layers
+
         # xdg-desktop-portals
         - xdg-desktop-portal
         - xdg-desktop-portal-gtk
@@ -45,3 +49,6 @@ modules:
         - bluez
         - bluez-tools
         - firewall-config
+
+        # packages for steam script
+        - lsb_release

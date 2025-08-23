@@ -3,11 +3,9 @@ modules:
     repos:
       nonfree: rpmfusion
       files:
-        - codium.repo
+        - https://repo.vscodium.dev/vscodium.repo
       copr:
         - mavit/discover-overlay
-      keys:
-        - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg
     install:
       packages:
       # applications

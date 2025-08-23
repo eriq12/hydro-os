@@ -16,7 +16,6 @@ modules:
   - from-file: components/script-module.yml
   - from-file: components/sys-files-module.yml
   - from-file: components/systemd-module.yml
-  - from-file: components/default-flatpak.yml
   - from-file: components/chezmoi-module.yml
 
   - type: signing
