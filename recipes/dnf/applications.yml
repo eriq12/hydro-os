@@ -60,6 +60,9 @@ modules:
         - gamescope
         # for performance view
         - mangohud
+      
+      # godot
+        - godot
   
     remove:
       packages:
